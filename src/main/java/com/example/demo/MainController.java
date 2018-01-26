@@ -23,25 +23,36 @@ public class MainController {
         System.out.println("Enter a positive integer greater than 0");
         int userValue = keyboard.nextInt(); // Stores number for problem start
 
+
         do {
             valueCheck = userValue % 2;
 
             if (valueCheck == 0) {
                 userValueResult = (userValue / 2);
-                display = userValue + " " + display + " " + userValueResult + " ";
+                //System.out.println("A value is " + userValue);
+                //display =  userValue + " " + display + " " + userValueResult + " ";
+                display += userValue + "<br>";
+                System.out.println("Even number display: " + display);
                 userValue = userValueResult;
+                //System.out.println("A value is" + userValue);
 
             }
 
-            if (valueCheck != 0) {
+            else if (valueCheck != 0) {
                 userValueResult = ((userValue * 3) + 1);
-                display = userValue + " " + display + " " + userValueResult + " ";
+                //System.out.println("A value is " + userValue);
+                //display = userValue + " " + display + " " + userValueResult + " ";
+                display += userValue + "<br>";
+                System.out.println("Odd number display: " + display);
                 userValue = userValueResult;
+                //System.out.println("B value is" + userValue);
+
             }
 
 
             }while (userValue != 1);
 
+        display += userValue + "<br>";
         //display = "Your webpage prints" + display + userValue;
         System.out.println(display);
         return display;
