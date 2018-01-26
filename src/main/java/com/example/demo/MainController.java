@@ -2,6 +2,7 @@ package com.example.demo;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Scanner;
 
@@ -9,7 +10,7 @@ import java.util.Scanner;
 public class MainController {
 
     @RequestMapping("/")
-    public String MagicNumber() {
+    public String MagicNumber(@RequestParam("userValue") int userValue) {
 
 
         //Initializing variables
@@ -19,9 +20,9 @@ public class MainController {
         int userValueResult;
 
 
-        Scanner keyboard = new Scanner(System.in); //Invoking scanner function called keyboard for future user input
-        System.out.println("Enter a positive integer greater than 0");
-        int userValue = keyboard.nextInt(); // Stores number for problem start
+       //  Scanner keyboard = new Scanner(System.in); //Invoking scanner function called keyboard for future user input
+       //  System.out.println("Enter a positive integer greater than 0");
+        // int userValue = keyboard.nextInt(); // Stores number for problem start
 
 
         do {
@@ -58,6 +59,20 @@ public class MainController {
         return display;
 
         }
+
+
+//        @RequestMapping
+//        public int acceptNumber(@RequestParam("number") int number )
+//        {
+//           /* String userNumber ="";
+//            Scanner keyboard = new Scanner (System.in);
+//            userNumber = keyboard.nextLine();
+//           */
+//
+//           return number;
+//
+//
+//        }
 
     }
 
